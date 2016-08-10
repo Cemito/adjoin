@@ -101,6 +101,9 @@ echo "Installed TMUX"
 sudo apt-get -y install xrdp
 echo "Installed XRDP"
 
+# Turn off WiFi
+sudo ifconfig wlan0 down
+
 ## REBOOT WHEN COMPLETE
 echo "DOMAIN JOIN COMPLETE. You must now reboot your system: 'sudo reboot'"
 # Don't actually reboot system in case things went wrong and user wants to debug
