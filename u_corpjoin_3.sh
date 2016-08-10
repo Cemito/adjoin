@@ -73,12 +73,21 @@ greeter-show-manual-login=true' >> /usr/share/lightdm/lightdm.conf.d/50-unity-gr
 sudo curl -O https://gitlab.com/dthomas_tableau/Linux/raw/master/Ubuntu/krb5.conf | mv krb5.conf /etc/krb5.conf
 
 ## Add Users as Admins when they login to GUI ##
+echo ""
+echo "==============================================================================="
+echo ""
 printf "Enter new users account name to be added to Sudoeres to make them an Admin: "
+echo ""
+echo "==============================================================================="
 read ADUSER
 adduser $ADUSER sudo
 
 # Pause script press <enter> to continue
+echo ""
+echo "==============================================================================="
 read -p $'The AD user account will now be a full Admin when they login.\nPress enter to continue.....\n'
+echo ""
+echo "==============================================================================="
 
 ## Install additional Application ##
 # Install VIM
@@ -105,6 +114,12 @@ echo "Installed XRDP"
 sudo ifconfig wlan0 down
 
 ## REBOOT WHEN COMPLETE
-echo "DOMAIN JOIN COMPLETE. You must now reboot your system: 'sudo reboot'"
+clear
+echo ""
+echo "==========================================================================================="
+echo " DOMAIN JOIN COMPLETE. 
+echo " TIME FOR A REBOOT! You must now reboot your system: 'sudo reboot'
+echo "==========================================================================================="
+echo ""
 # Don't actually reboot system in case things went wrong and user wants to debug
 #reboot
