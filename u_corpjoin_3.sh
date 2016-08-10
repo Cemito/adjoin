@@ -108,10 +108,10 @@ sudo ifconfig wlan0 down
 ## REBOOT WHEN COMPLETE
 clear
 echo ""
-echo "================================================================="
-echo " DOMAIN JOIN COMPLETE. 
-echo " TIME FOR A REBOOT! You must now reboot your system: 'sudo reboot'
-echo "================================================================="
+echo "==================================================================="
+echo " DOMAIN JOIN COMPLETE. "
+echo " TIME FOR A REBOOT! You must now reboot your system: 'sudo reboot' "
+echo "==================================================================="
 echo ""
 # Don't actually reboot system in case things went wrong and user wants to debug
 #reboot
