@@ -41,7 +41,7 @@ curl -O http://download.beyondtrust.com/PBISO/8.3/pbis-open-8.3.0.3287.linux.x86
 chmod a+x pbis-open-8.3.0.3287.linux.x86_64.deb.sh #make executable file
 
 # Install openssh server
-apt-get install openssh-server
+apt-get -y install openssh-server
 
 # move and rename file to home directory
 mv pbis-open-8.3.0.3287.linux.x86_64.deb.sh ~/pbis-open.deb.sh 
@@ -50,7 +50,7 @@ cd ~ #go to home directory
 
 bash pbis-open.deb.sh #run script
 
-apt-get install libglade2-0
+apt-get -y install libglade2-0
 
 cd /opt/likewise/bin
 
