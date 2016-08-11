@@ -102,6 +102,12 @@ echo "Installed TMUX"
 sudo apt-get -y install xrdp
 echo "Installed XRDP"
 
+# Install Dconf Tools
+sudo apt-get -y install dconf-tools
+dconf write /org/gnome/desktop/remote-access/require-encryption false   /usr/lib/vino/vino-server --sm-disable start
+vino-preferences
+echo "Installed Dconf Editor and enabled Screen Sharing"
+
 # Turn off WiFi
 sudo ifconfig wlan0 down
 
