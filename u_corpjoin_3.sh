@@ -6,7 +6,6 @@ apt-get upgrade
 apt-get autoclean
 
 # Install puppet
-
 echo "Download and install puppetslabs for Trusty"
 curl -O https://apt.puppetlabs.com/puppetlabs-release-trusty.deb && sudo dpkg -i puppetlabs-release-trusty.deb
 
@@ -109,7 +108,7 @@ vino-preferences
 echo "Installed Dconf Editor and enabled Screen Sharing"
 
 # Turn off WiFi
-sudo ifconfig wlan0 down
+nmcli r wifi off
 
 ## REBOOT WHEN COMPLETE
 clear
