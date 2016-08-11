@@ -1,9 +1,9 @@
 #!/bin/bash
 
 # Update System & Software packages
-apt-get update
-apt-get upgrade
-apt-get autoclean
+apt-get -y update
+apt-get -y upgrade
+apt-get -y autoclean
 
 # Install puppet
 echo "Download and install puppetslabs for Trusty"
