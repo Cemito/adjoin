@@ -108,7 +108,7 @@ nmcli r wifi off
 sudo apt-get -y install dconf-tools
 dconf write /org/gnome/desktop/remote-access/require-encryption false   /usr/lib/vino/vino-server --sm-disable start
 # Pause script press <enter> to continue
-read -p $'\n\n\n\n\nThe Desktop Sharing Preferences box will appear after you press enter, please make the changes below:\nTick "Allow other users to view your desktop" and set a password.\nUntick "You must confirm each access to this machine".\n\nPress enter to continue......\n'
+read -p $'\n\n\n\n\nThe Desktop Sharing Preferences box will appear after you press enter, please make the changes below:\n\nTick "Allow other users to view your desktop" and set a password.\nUntick "You must confirm each access to this machine".\n\nPress enter to continue......\n'
 vino-preferences
 
 # Pause script press <enter> to continue
