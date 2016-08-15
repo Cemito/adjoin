@@ -112,7 +112,6 @@ read -p $'\n\n\n\n\nThe Desktop Sharing Preferences box will appear after you pr
 vino-preferences
 
 # Pause script press <enter> to continue
-read -p $'\n\n\n\nTick "Allow other users to view your desktop" and set a password.\nUntick "You must confirm each access to this machine".\n\nOnce you have made the changes come back to this screen and press enter to continue......\n'
 echo "Installed Dconf Editor and enabled Screen Sharing"
 
 ## REBOOT WHEN COMPLETE
