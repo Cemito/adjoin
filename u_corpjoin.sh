@@ -89,6 +89,10 @@ echo "Installed VIM"
 sudo apt-get -y install vim-x11
 echo "Installed VIM with GUI"
 
+# Install GParted
+sudo apt-get -y gparted
+echo "Installed GParted"
+
 # Install Screen
 sudo apt-get -y install screen
 echo "Installed Screen"
