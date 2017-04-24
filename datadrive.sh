@@ -20,19 +20,19 @@ do
 		
 		w
 		"|fdisk $i;mkfs.ext4 $i;done 
-		sudo mkdir /media/DATA
-		sudo mount /dev/sdb /media/DATA
+		sudo mkdir /data
+		sudo mount /dev/sdb /data
 
-		sudo e2label /dev/sdb DATA
+		sudo e2label /dev/sdb data
             ;;
 "Mount the drive")
-sudo su -c "echo '/dev/sdb /media/DATA ext4 rw,data=ordered 0 0' >> /etc/fstab"
+sudo su -c "echo '/dev/sdb /data ext4 rw,data=ordered 0 0' >> /etc/fstab"
 ;;
 
 "Change Ownership")
 printf "Type name of the user you want to change drive permissions to:  "
 read ADUSER
-sudo chown $ADUSER /media/DATA
+sudo chown $ADUSER /data
 ;;
         "Quit")
             break
