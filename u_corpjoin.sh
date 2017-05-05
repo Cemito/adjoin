@@ -4,7 +4,8 @@
 apt-get -y update
 apt-get -y upgrade
 apt-get -y autoclean
-sudo apt-get install curl
+apt-get install curl
+apt-get -y install gparted
 
 # Install puppet
 echo "Download and install puppetslabs for Trusty"
