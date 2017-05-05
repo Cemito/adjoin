@@ -4,6 +4,7 @@
 apt-get -y update
 apt-get -y upgrade
 apt-get -y autoclean
+sudo apt-get install curl
 
 # Install puppet
 echo "Download and install puppetslabs for Trusty"
