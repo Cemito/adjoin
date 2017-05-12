@@ -6,6 +6,8 @@ apt-get -y upgrade
 apt-get -y autoclean
 apt-get install curl
 apt-get -y install gparted
+apt-get install openssh-client -y
+apt-get install openssh-server -y
 
 # Install puppet
 echo "Download and install puppetslabs for Trusty"
