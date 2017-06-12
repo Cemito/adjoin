@@ -258,4 +258,4 @@ sudo bash -c 'echo "%GG-TSI-AD-IT-M ALL=(ALL) ALL" >> /etc/sudoers.d/development
 
 # Append text to end of config files
 echo 'allow-guest=false 
-greeter-show-manual-login=true' >> /usr/share/lightdm/lightdm.conf.d/50-unity-greeter.
+greeter-show-manual-login=true' >> /usr/share/lightdm/lightdm.conf.d/50-unity-greeter
