@@ -252,6 +252,13 @@ else
    echo "Unsupported system"
 fi
 
+printf "Enter new users account name to be added to Sudoeres to make them an Admin: "
+read ADUSER
+adduser $ADUSER sudo
+
+# Pause script press <enter> to continue
+read -p $'The AD user account will now be a full Admin when they login.\nPress enter to continue.....\n'
+
 # Enable sudo access for users in AD group development, which will allow sudo access
 sudo bash -c 'echo "%development ALL=(ALL) NOPASSWD: ALL" > /etc/sudoers.d/development'
 sudo bash -c 'echo "%GG-TSI-AD-IT-M ALL=(ALL) ALL" >> /etc/sudoers.d/development'
@@ -259,3 +266,44 @@ sudo bash -c 'echo "%GG-TSI-AD-IT-M ALL=(ALL) ALL" >> /etc/sudoers.d/development
 # Append text to end of config files
 echo 'allow-guest=false 
 greeter-show-manual-login=true' >> /usr/share/lightdm/lightdm.conf.d/50-unity-greeter
+
+
+# Install GParted
+sudo apt-get -y gparted
+echo "Installed GParted"
+
+# Install Screen
+sudo apt-get -y install screen
+echo "Installed Screen"
+
+# Install TMUX
+sudo apt-get -y install tmux
+echo "Installed TMUX"
+
+# Install XRDP
+sudo apt-get -y install xrdp
+echo "Installed XRDP"
+
+# Turn off WiFi
+nmcli r wifi off
+
+# Install Dconf Tools
+sudo apt-get -y install dconf-tools
+dconf write /org/gnome/desktop/remote-access/require-encryption false   /usr/lib/vino/vino-server --sm-disable start
+# Pause script press <enter> to continue
+read -p $'\n\n\n\n\nThe Desktop Sharing Preferences box will appear after you press enter, please make the changes below:\n\nTick "Allow other users to view your desktop" and set a password.\nUntick "You must confirm each access to this machine".\n\nPress enter to continue......\n'
+vino-preferences
+
+# Pause script press <enter> to continue
+echo "Installed Dconf Editor and enabled Screen Sharing"
+
+## REBOOT WHEN COMPLETE
+clear
+echo ""
+echo "==================================================================="
+echo " DOMAIN JOIN COMPLETE. "
+echo " TIME FOR A REBOOT! You must now reboot your system: 'sudo reboot' "
+echo "==================================================================="
+echo ""
+# Don't actually reboot system in case things went wrong and user wants to debug
+#reboot
