@@ -124,7 +124,7 @@ EOF
 # Download domain join keytab
 curl -o /etc/domainjoin.keytab http://puppetshare.dev.tsi.lan/scripts/krb5.keytab.svc_domainjoin_devit
 JOIN_ACCOUNT="svc_domainjoin_devit"
-JOIN_OU="TSI_DevIT/Build"
+JOIN_OU="TSI Computers/Workstations/Dev Workstations"
 
 fi
 
@@ -186,7 +186,7 @@ EOF
 # Download domain join keytab
 curl -o /etc/domainjoin.keytab http://puppetshare.dev.tsi.lan/scripts/krb5.keytab.svc_domainjoin
 JOIN_ACCOUNT="svc_domainjoin"
-JOIN_OU="Dev_Computers/Build"
+JOIN_OU="TSI Computers/Workstations/Dev Workstations"
 
 fi
 
