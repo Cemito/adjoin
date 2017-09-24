@@ -2,3 +2,7 @@ The 2017sssd.sh script adds Linux machines to Active Directory using SSSD daemon
 This has been tested and working on Ubuntu.
 
 "datadrive.sh" - Installs GParted, formats secondary drive, mounts the drive and changes ownership of the drive to the user you select so they have full read read write permissions.
+
+"u_corpjoin.sh" - Adds the computer to Active Directory using PBIS. (Use SSSD as this is a better method). 
+
+"dns_fix.sh" - Only needs to be run on computers added to Active Directory using PBIS if they cannot be pinged or accessed.
