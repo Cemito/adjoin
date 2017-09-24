@@ -1,0 +1,2 @@
+The 2017sssd.sh script adds Linux machines to Active Directory using SSSD daemon.
+This has been tested and working on Ubuntu.

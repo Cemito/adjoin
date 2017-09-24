@@ -284,7 +284,7 @@ echo "Installed TMUX"
 sudo apt-get -y install xrdp
 echo "Installed XRDP"
 
-# Turn off WiFi
+# Turn off WiFi Adapter
 nmcli r wifi off
 
 # Install Dconf Tools
