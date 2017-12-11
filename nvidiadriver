@@ -5,5 +5,5 @@ if [[ $(lspci -k | grep 'VGA') = *NVIDIA* ]]; then
 	sudo apt-mark hold nvidia-387
 	sudo reboot
 else
-	echo "This computer does not have a nVidia Graphics card driver the nVidia Driver will not be installed."
+	echo "This computer does not have a nVidia Graphics card installed so the nVidia Driver will not be installed."
 fi
