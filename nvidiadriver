@@ -1,4 +1,5 @@
-wget http://us.download.nvidia.com/XFree86/Linux-x86_64/367.35/NVIDIA-Linux-x86_64-367.35.run
-chmod +x NVIDIA-Linux-x86_64-367.35.run
-sudo ./NVIDIA-Linux-x86_64-367.35.run
-rm -r NVIDIA-Linux-x86_64-367.35.run
+sudo add-apt-repository ppa:graphics-drivers
+sudo apt-get update
+sudo apt-get install nvidia-387
+sudo apt-mark hold nvidia-387
+sudo reboot
