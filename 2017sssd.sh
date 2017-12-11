@@ -287,6 +287,15 @@ echo "Installed XRDP"
 # Turn off WiFi Adapter
 nmcli r wifi off
 
+if [[ $(lspci -k | grep 'VGA') = *NVIDIA* ]]; then 
+	sudo add-apt-repository ppa:graphics-drivers
+	sudo apt-get update
+	sudo apt-get install nvidia-387
+	sudo apt-mark hold nvidia-387
+else
+	echo "This computer does not have a nVidia Graphics card installed so the nVidia Driver will not be installed."
+fi
+
 # Install Dconf Tools
 sudo apt-get -y install dconf-tools
 dconf write /org/gnome/desktop/remote-access/require-encryption false   /usr/lib/vino/vino-server --sm-disable start
