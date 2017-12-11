@@ -1,5 +1,8 @@
-sudo add-apt-repository ppa:graphics-drivers
-sudo apt-get update
-sudo apt-get install nvidia-387
-sudo apt-mark hold nvidia-387
-sudo reboot
+if [[ $(lspci -k | grep 'VGA') = *NVIDIA* ]]; then 
+	sudo add-apt-repository ppa:graphics-drivers
+	sudo apt-get update
+	sudo apt-get install nvidia-387
+	sudo apt-mark hold nvidia-387
+else
+	echo "not running installer"
+fi
